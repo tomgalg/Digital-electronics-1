@@ -1,14 +1,3 @@
-# Digital-electronics-1
-
-#### Obsah 
-
-***Hlavička 2***
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
 
 # Digital-electronics-1
 
@@ -17,13 +6,13 @@
 1. snaha něco dělat
 2. fasfas
 3. asfasfaf
-4. [odkay](#Online-simulator)
+4. [odkaz](#Online-simulator)
 
 
 
-## Lab prerequisites
+## další hlavička
 
-1. Create an account on [GitHub](https://github.com/) server.
+1. text dalšího odstavce
 
 
 ## GitHub
@@ -41,17 +30,9 @@
 
 1. Try basic commands in the Linux terminal:
 
-| **Command** | **Description** |
+| **1sloupec** | **2sloupec** |
 | :-: | :-- |
-| `Ctrl+Alt+T` | Open Linux terminal in Ubuntu based distributions |
-| `Tab` | Automatic completion what you are typing or suggest options to you |
-| `Up/Down` | Browse command history |
-| `ls` | List directory contents |
-| `cd` | Change the current directory (change to parent directory: `cd ..`) |
-| `mkdir` | Make directories |
-| `cp` | Copy files and directories |
-| `pwd` | Print name of current/working directory |
-| `touch` | Create an empty file (if it does not exist) |
+| `tlacitko 1`| nic neotevře |
 | `mc` | GNU Midnight Commander (file manager) |
 
 2. In the lab, make your own home folder within `Documents`, and with help of `git` command create a local copy of your public repository:
