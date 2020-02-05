@@ -2,7 +2,7 @@
 
 #### Obsah 
 
-**Hlavička 2**
+***Hlavička 2***
 1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list. 
