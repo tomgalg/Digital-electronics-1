@@ -114,7 +114,7 @@
 
     &nbsp;
 
-    ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D%20%3D)
+    ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D%20%3D) 1155
     
     &nbsp;
     
