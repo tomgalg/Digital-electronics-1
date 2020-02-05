@@ -80,33 +80,33 @@
 
 2. Run any text editor, such as Visual Studio Code, open `Digital-electronics-1/Labs/01-gates/README.md` file, create/complete tables with logical values, and add a screenshot from the simulator.
 
-    ![and_gates](../../Morgans.png)
+    ![and_gates](Morgans.png)
 
-    | **A** | **NOT** |
-    | :-: | :-: |
-    | 0 | 1 |
-    | 1 | 0 |
+| **A** | **NOT** |
+| :-: | :-: |
+| 0 | 1 |
+| 1 | 0 |
 
-    | **A** | **B** | **AND** | **NAND** |
-    | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 1 |
-    | 0 | 1 | 0 | 1 |
-    | 1 | 0 | 0 | 1 |
-    | 1 | 1 | 1 | 0 |
+| **A** | **B** | **AND** | **NAND** |
+| :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
 
-    | **A** | **B** | **OR** | **NOR** |
-    | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 1 |
-    | 0 | 1 | 1 | 0 |
-    | 1 | 0 | 1 | 0 |
-    | 1 | 1 | 1 | 0 |
+| **A** | **B** | **OR** | **NOR** |
+| :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 |
 
-    | **A** | **B** | **XOR** | **XNOR** |
-    | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 1 |
-    | 0 | 1 | 1 | 0 |
-    | 1 | 0 | 1 | 0 |
-    | 1 | 1 | 0 | 1 |
+| **A** | **B** | **XOR** | **XNOR** |
+| :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
 
 3. Use online simulator and verify De Morgan's laws.
 
