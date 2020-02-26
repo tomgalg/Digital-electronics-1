@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 27: Syntax error near &quot;<arg fmt="%s" index="1">in</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 18: Unit &lt;<arg fmt="%s" index="1">top</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 44: Entity &lt;<arg fmt="%s" index="1">top</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 45: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 46: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 47: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 48: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 63: &lt;<arg fmt="%s" index="1">s_dataa</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 64: &lt;<arg fmt="%s" index="1">s_datab</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 66: &lt;<arg fmt="%s" index="1">s_carry0</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 66: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">carry_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 67: &lt;<arg fmt="%s" index="1">s_result</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 67: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">sum_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 72: &lt;<arg fmt="%s" index="1">s_dataa</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 73: &lt;<arg fmt="%s" index="1">s_datab</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 74: &lt;<arg fmt="%s" index="1">s_carry0</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 75: &lt;<arg fmt="%s" index="1">s_carry1</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="192" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 75: Actual of formal <arg fmt="%s" index="1">out</arg> port <arg fmt="%s" index="2">carry_o</arg> cannot be an expression
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/top.vhd" Line 76: &lt;<arg fmt="%s" index="1">s_result</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

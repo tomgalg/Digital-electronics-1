@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/full_adder_tb_isim_beh.exe" -prj "/home/lab661/Documents/xgalga00/Digital-electronics-1/labs/04-adder/binary_adder/full_adder_tb_beh.prj" "work.full_adder_tb" 
