@@ -1,0 +1,485 @@
+MDF Database:  version 1.0
+MDF_INFO | top | XC2C256-6-TQ144
+MACROCELL | 2 | 2 | LD0_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD0_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 2 | 4 | LD10_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD10_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 2 | 13 | LD11_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD11_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 2 | 15 | LD1_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD1_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 0 | LD2_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD2_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 1 | LD3_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD3_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 2 | LD8_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD8_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 3 | LD9_CPLD_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   LD9_CPLD = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 3 | 4 | disp_dig_o<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   disp_dig_o<0> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 14 | disp_dig_o<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<1> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 2 | 0 | disp_dig_o<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<2> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 2 | 1 | disp_dig_o<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   !disp_dig_o<3> = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 12 | disp_seg_o<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<2>  | bity<1>  | bity<3>  | bity<0>
+INPUTMC | 4 | 1 | 10 | 1 | 9 | 1 | 15 | 1 | 8
+EQ | 3 | 
+   disp_seg_o<0> = !bity<2> & !bity<1> & !bity<3>
+	# bity<2> & bity<1> & bity<0> & !bity<3>
+	# bity<2> & !bity<1> & !bity<0> & bity<3>;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 10 | bity<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 10 | 1 | 15 | 1 | 12 | 1 | 0 | 1 | 2 | 1 | 13 | 1 | 11 | 1 | 3 | 1 | 4
+INPUTS | 5 | bity<2>  | BTN0  | bity<1>  | bity<0>  | s_e
+INPUTMC | 4 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 11
+INPUTP | 1 | 218
+EQ | 3 | 
+   bity<2>.T := bity<2> & !BTN0
+	# BTN0 & bity<1> & bity<0> & s_e;	// (2 pt, 5 inp)
+   bity<2>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 9 | bity<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 1 | 9 | 1 | 10 | 1 | 15 | 1 | 12 | 1 | 0 | 1 | 2 | 1 | 13 | 1 | 11 | 1 | 3 | 1 | 4
+INPUTS | 4 | BTN0  | bity<1>  | bity<0>  | s_e
+INPUTMC | 3 | 1 | 9 | 1 | 8 | 0 | 11
+INPUTP | 1 | 218
+EQ | 3 | 
+   bity<1>.T := !BTN0 & bity<1>
+	# BTN0 & bity<0> & s_e;	// (2 pt, 4 inp)
+   bity<1>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 8 | bity<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 11 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 15 | 1 | 12 | 1 | 0 | 1 | 2 | 1 | 13 | 1 | 11 | 1 | 3 | 1 | 4
+INPUTS | 3 | BTN0  | bity<0>  | s_e
+INPUTMC | 2 | 1 | 8 | 0 | 11
+INPUTP | 1 | 218
+EQ | 3 | 
+   bity<0> := BTN0 & bity<0> & !s_e
+	# BTN0 & !bity<0> & s_e;	// (2 pt, 3 inp)
+   bity<0>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 11 | s_e_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 15
+INPUTS | 17 | BTN0  | clock_enable/s_cnt<11>  | clock_enable/s_cnt<12>  | clock_enable/s_cnt<13>  | clock_enable/s_cnt<14>  | clock_enable/s_cnt<15>  | clock_enable/s_cnt<10>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<9>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<1>
+INPUTMC | 16 | 0 | 0 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 13 | 0 | 6 | 0 | 12 | 0 | 4 | 0 | 1 | 0 | 8 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 7
+INPUTP | 1 | 218
+EQ | 21 | 
+   !s_e := !BTN0
+	# !clock_enable/s_cnt<11> & !clock_enable/s_cnt<12> & 
+	!clock_enable/s_cnt<13> & !clock_enable/s_cnt<14> & !clock_enable/s_cnt<15>
+	# !clock_enable/s_cnt<12> & !clock_enable/s_cnt<13> & 
+	!clock_enable/s_cnt<14> & !clock_enable/s_cnt<15> & !clock_enable/s_cnt<10> & 
+	!clock_enable/s_cnt<6> & !clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<12> & !clock_enable/s_cnt<13> & 
+	!clock_enable/s_cnt<14> & !clock_enable/s_cnt<15> & !clock_enable/s_cnt<10> & 
+	!clock_enable/s_cnt<7> & !clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<12> & !clock_enable/s_cnt<13> & 
+	!clock_enable/s_cnt<14> & !clock_enable/s_cnt<15> & !clock_enable/s_cnt<10> & 
+	!clock_enable/s_cnt<8> & !clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<0> & !clock_enable/s_cnt<12> & 
+	!clock_enable/s_cnt<13> & !clock_enable/s_cnt<14> & !clock_enable/s_cnt<15> & 
+	!clock_enable/s_cnt<10> & !clock_enable/s_cnt<2> & !clock_enable/s_cnt<3> & 
+	!clock_enable/s_cnt<4> & !clock_enable/s_cnt<5> & !clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<12> & !clock_enable/s_cnt<13> & 
+	!clock_enable/s_cnt<14> & !clock_enable/s_cnt<15> & !clock_enable/s_cnt<10> & 
+	!clock_enable/s_cnt<1> & !clock_enable/s_cnt<2> & !clock_enable/s_cnt<3> & 
+	!clock_enable/s_cnt<4> & !clock_enable/s_cnt<5> & !clock_enable/s_cnt<9>;	// (7 pt, 17 inp)
+   s_e.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 0 | clock_enable/s_cnt<11>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 0 | 12 | 1 | 1 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 15 | clock_enable/s_cnt<11>  | N_PZ_134  | clock_enable/s_cnt<0>  | N_PZ_114  | N_PZ_120  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<10>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>  | clock_enable/s_cnt<9>
+INPUTMC | 15 | 0 | 0 | 1 | 1 | 0 | 8 | 1 | 5 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 6 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 12
+EQ | 11 | 
+   clock_enable/s_cnt<11> := clock_enable/s_cnt<11> & !N_PZ_134
+	# !clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120 & 
+	N_PZ_134
+	# N_PZ_114 & N_PZ_120 & N_PZ_134 & 
+	!clock_enable/s_cnt<1>
+	# clock_enable/s_cnt<0> & clock_enable/s_cnt<10> & 
+	!N_PZ_134 & clock_enable/s_cnt<6> & clock_enable/s_cnt<1> & 
+	clock_enable/s_cnt<2> & clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & 
+	clock_enable/s_cnt<5> & clock_enable/s_cnt<7> & clock_enable/s_cnt<8> & 
+	clock_enable/s_cnt<9>;	// (4 pt, 15 inp)
+   clock_enable/s_cnt<11>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 8 | clock_enable/s_cnt<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 13 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 8 | 0 | 0 | 0 | 11
+INPUTS | 3 | clock_enable/s_cnt<0>  | N_PZ_114  | N_PZ_120
+INPUTMC | 3 | 0 | 8 | 1 | 5 | 0 | 5
+EQ | 2 | 
+   clock_enable/s_cnt<0> := !clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120;	// (1 pt, 3 inp)
+   clock_enable/s_cnt<0>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 5 | N_PZ_114_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 1 | 1 | 0 | 8 | 0 | 0
+INPUTS | 5 | BTN0  | clock_enable/s_cnt<12>  | clock_enable/s_cnt<13>  | clock_enable/s_cnt<14>  | clock_enable/s_cnt<15>
+INPUTMC | 4 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9
+INPUTP | 1 | 218
+EQ | 2 | 
+   N_PZ_114 = BTN0 & !clock_enable/s_cnt<12> & 
+	!clock_enable/s_cnt<13> & !clock_enable/s_cnt<14> & !clock_enable/s_cnt<15>;	// (1 pt, 5 inp)
+
+MACROCELL | 0 | 15 | clock_enable/s_cnt<12>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 5 | 0 | 11
+INPUTS | 0
+EQ | 2 | 
+   clock_enable/s_cnt<12> := Gnd;	// (0 pt, 0 inp)
+   clock_enable/s_cnt<12>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 14 | clock_enable/s_cnt<13>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 5 | 0 | 11
+INPUTS | 0
+EQ | 2 | 
+   clock_enable/s_cnt<13> := Gnd;	// (0 pt, 0 inp)
+   clock_enable/s_cnt<13>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 10 | clock_enable/s_cnt<14>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 5 | 0 | 11
+INPUTS | 0
+EQ | 2 | 
+   clock_enable/s_cnt<14> := Gnd;	// (0 pt, 0 inp)
+   clock_enable/s_cnt<14>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 9 | clock_enable/s_cnt<15>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 5 | 0 | 11
+INPUTS | 0
+EQ | 2 | 
+   clock_enable/s_cnt<15> := Gnd;	// (0 pt, 0 inp)
+   clock_enable/s_cnt<15>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 5 | N_PZ_120_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 8 | 0 | 0
+INPUTS | 10 | clock_enable/s_cnt<11>  | clock_enable/s_cnt<10>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<9>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>
+INPUTMC | 10 | 0 | 0 | 0 | 13 | 0 | 6 | 0 | 12 | 0 | 4 | 0 | 1 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3
+EQ | 10 | 
+   N_PZ_120 = !clock_enable/s_cnt<11>
+	# !clock_enable/s_cnt<10> & !clock_enable/s_cnt<6> & 
+	!clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<10> & !clock_enable/s_cnt<7> & 
+	!clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<10> & !clock_enable/s_cnt<8> & 
+	!clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<10> & !clock_enable/s_cnt<2> & 
+	!clock_enable/s_cnt<3> & !clock_enable/s_cnt<4> & !clock_enable/s_cnt<5> & 
+	!clock_enable/s_cnt<9>;	// (5 pt, 10 inp)
+
+MACROCELL | 0 | 13 | clock_enable/s_cnt<10>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 0 | 1 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 12 | clock_enable/s_cnt<10>  | N_PZ_134  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>  | clock_enable/s_cnt<9>
+INPUTMC | 12 | 0 | 13 | 1 | 1 | 0 | 8 | 0 | 6 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 12
+EQ | 6 | 
+   clock_enable/s_cnt<10>.T := clock_enable/s_cnt<10> & N_PZ_134
+	# clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<6> & clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & 
+	clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & clock_enable/s_cnt<5> & 
+	clock_enable/s_cnt<7> & clock_enable/s_cnt<8> & clock_enable/s_cnt<9>;	// (2 pt, 12 inp)
+   clock_enable/s_cnt<10>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 1 | N_PZ_134_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 9 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 13 | 0 | 0
+INPUTS | 7 | N_PZ_114  | clock_enable/s_cnt<11>  | clock_enable/s_cnt<10>  | clock_enable/s_cnt<9>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>
+INPUTMC | 7 | 1 | 5 | 0 | 0 | 0 | 13 | 0 | 12 | 0 | 6 | 0 | 4 | 0 | 1
+EQ | 5 | 
+   N_PZ_134 = !N_PZ_114
+	# clock_enable/s_cnt<11> & clock_enable/s_cnt<10>
+	# clock_enable/s_cnt<11> & clock_enable/s_cnt<9>
+	# clock_enable/s_cnt<11> & clock_enable/s_cnt<6> & 
+	clock_enable/s_cnt<7> & clock_enable/s_cnt<8>;	// (4 pt, 7 inp)
+
+MACROCELL | 0 | 6 | clock_enable/s_cnt<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 10 | N_PZ_114  | clock_enable/s_cnt<6>  | N_PZ_120  | clock_enable/s_cnt<0>  | N_PZ_134  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>
+INPUTMC | 10 | 1 | 5 | 0 | 6 | 0 | 5 | 0 | 8 | 1 | 1 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3
+EQ | 8 | 
+   clock_enable/s_cnt<6>.T := !N_PZ_114 & clock_enable/s_cnt<6>
+	# !N_PZ_120 & clock_enable/s_cnt<6>
+	# clock_enable/s_cnt<0> & N_PZ_134 & 
+	clock_enable/s_cnt<6> & clock_enable/s_cnt<1>
+	# clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120 & 
+	!N_PZ_134 & clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & 
+	clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & clock_enable/s_cnt<5>;	// (4 pt, 10 inp)
+   clock_enable/s_cnt<6>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 7 | clock_enable/s_cnt<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 12 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 0 | 0 | 11
+INPUTS | 4 | clock_enable/s_cnt<0>  | N_PZ_114  | N_PZ_120  | clock_enable/s_cnt<1>
+INPUTMC | 4 | 0 | 8 | 1 | 5 | 0 | 5 | 0 | 7
+EQ | 5 | 
+   clock_enable/s_cnt<1> := clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120 & 
+	!clock_enable/s_cnt<1>
+	# !clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120 & 
+	clock_enable/s_cnt<1>;	// (2 pt, 4 inp)
+   clock_enable/s_cnt<1>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 7 | clock_enable/s_cnt<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 12 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 4 | N_PZ_134  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<1>
+INPUTMC | 4 | 1 | 1 | 1 | 7 | 0 | 8 | 0 | 7
+EQ | 4 | 
+   clock_enable/s_cnt<2> := !N_PZ_134 & clock_enable/s_cnt<2>
+	$ clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<1>;	// (2 pt, 4 inp)
+   clock_enable/s_cnt<2>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 6 | clock_enable/s_cnt<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 11 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 5 | N_PZ_134  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>
+INPUTMC | 5 | 1 | 1 | 1 | 6 | 0 | 8 | 0 | 7 | 1 | 7
+EQ | 4 | 
+   clock_enable/s_cnt<3> := !N_PZ_134 & clock_enable/s_cnt<3>
+	$ clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<1> & clock_enable/s_cnt<2>;	// (2 pt, 5 inp)
+   clock_enable/s_cnt<3>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 2 | clock_enable/s_cnt<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 10 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 6 | N_PZ_134  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>
+INPUTMC | 6 | 1 | 1 | 0 | 2 | 0 | 8 | 0 | 7 | 1 | 7 | 1 | 6
+EQ | 4 | 
+   clock_enable/s_cnt<4> := !N_PZ_134 & clock_enable/s_cnt<4>
+	$ clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & clock_enable/s_cnt<3>;	// (2 pt, 6 inp)
+   clock_enable/s_cnt<4>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 3 | clock_enable/s_cnt<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 7 | N_PZ_134  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>
+INPUTMC | 7 | 1 | 1 | 0 | 3 | 0 | 8 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2
+EQ | 5 | 
+   clock_enable/s_cnt<5>.T := N_PZ_134 & clock_enable/s_cnt<5>
+	# clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & clock_enable/s_cnt<3> & 
+	clock_enable/s_cnt<4>;	// (2 pt, 7 inp)
+   clock_enable/s_cnt<5>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 4 | clock_enable/s_cnt<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 0 | 4 | 0 | 12 | 0 | 1 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 11 | N_PZ_114  | clock_enable/s_cnt<7>  | N_PZ_120  | clock_enable/s_cnt<0>  | N_PZ_134  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>
+INPUTMC | 11 | 1 | 5 | 0 | 4 | 0 | 5 | 0 | 8 | 1 | 1 | 0 | 7 | 0 | 6 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3
+EQ | 8 | 
+   clock_enable/s_cnt<7>.T := !N_PZ_114 & clock_enable/s_cnt<7>
+	# !N_PZ_120 & clock_enable/s_cnt<7>
+	# clock_enable/s_cnt<0> & N_PZ_134 & 
+	clock_enable/s_cnt<1> & clock_enable/s_cnt<7>
+	# clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<6> & clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & 
+	clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & clock_enable/s_cnt<5>;	// (4 pt, 11 inp)
+   clock_enable/s_cnt<7>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 1 | clock_enable/s_cnt<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 7 | 0 | 1 | 0 | 12 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 14 | N_PZ_134  | clock_enable/s_cnt<8>  | clock_enable/s_cnt<0>  | N_PZ_114  | N_PZ_120  | clock_enable/s_cnt<10>  | clock_enable/s_cnt<9>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<7>
+INPUTMC | 14 | 1 | 1 | 0 | 1 | 0 | 8 | 1 | 5 | 0 | 5 | 0 | 13 | 0 | 12 | 0 | 7 | 0 | 6 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 4
+EQ | 13 | 
+   clock_enable/s_cnt<8> := !N_PZ_134 & clock_enable/s_cnt<8>
+	$ !clock_enable/s_cnt<0> & N_PZ_114 & N_PZ_120 & 
+	!clock_enable/s_cnt<10> & N_PZ_134 & !clock_enable/s_cnt<9>
+	# N_PZ_114 & N_PZ_120 & !clock_enable/s_cnt<10> & 
+	N_PZ_134 & !clock_enable/s_cnt<1> & !clock_enable/s_cnt<9>
+	# clock_enable/s_cnt<0> & !N_PZ_134 & 
+	clock_enable/s_cnt<6> & clock_enable/s_cnt<1> & clock_enable/s_cnt<2> & 
+	clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & clock_enable/s_cnt<5> & 
+	clock_enable/s_cnt<7>
+	# !N_PZ_120 & !N_PZ_134 & clock_enable/s_cnt<6> & 
+	clock_enable/s_cnt<2> & clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & 
+	clock_enable/s_cnt<5> & clock_enable/s_cnt<7> & clock_enable/s_cnt<8>;	// (5 pt, 14 inp)
+   clock_enable/s_cnt<8>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 0 | 12 | clock_enable/s_cnt<9>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 12 | 0 | 1 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 0 | 0 | 11
+INPUTS | 12 | clock_enable/s_cnt<11>  | clock_enable/s_cnt<9>  | N_PZ_114  | clock_enable/s_cnt<0>  | clock_enable/s_cnt<6>  | clock_enable/s_cnt<1>  | clock_enable/s_cnt<2>  | clock_enable/s_cnt<3>  | clock_enable/s_cnt<4>  | clock_enable/s_cnt<5>  | clock_enable/s_cnt<7>  | clock_enable/s_cnt<8>
+INPUTMC | 12 | 0 | 0 | 0 | 12 | 1 | 5 | 0 | 8 | 0 | 6 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 4 | 0 | 1
+EQ | 7 | 
+   clock_enable/s_cnt<9>.T := clock_enable/s_cnt<11> & clock_enable/s_cnt<9>
+	# !N_PZ_114 & clock_enable/s_cnt<9>
+	# !clock_enable/s_cnt<11> & clock_enable/s_cnt<0> & 
+	N_PZ_114 & clock_enable/s_cnt<6> & clock_enable/s_cnt<1> & 
+	clock_enable/s_cnt<2> & clock_enable/s_cnt<3> & clock_enable/s_cnt<4> & 
+	clock_enable/s_cnt<5> & clock_enable/s_cnt<7> & clock_enable/s_cnt<8>;	// (3 pt, 12 inp)
+   clock_enable/s_cnt<9>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 15 | bity<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 15 | 1 | 12 | 1 | 0 | 1 | 2 | 1 | 13 | 1 | 11 | 1 | 3 | 1 | 4
+INPUTS | 6 | BTN0  | bity<3>  | bity<2>  | bity<1>  | bity<0>  | s_e
+INPUTMC | 5 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 11
+INPUTP | 1 | 218
+EQ | 3 | 
+   bity<3>.T := !BTN0 & bity<3>
+	# bity<2> & BTN0 & bity<1> & bity<0> & s_e;	// (2 pt, 6 inp)
+   bity<3>.CLK  =  clk_i;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk_i
+
+MACROCELL | 1 | 0 | disp_seg_o<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<0>  | bity<3>  | bity<2>  | bity<1>
+INPUTMC | 4 | 1 | 8 | 1 | 15 | 1 | 10 | 1 | 9
+EQ | 3 | 
+   disp_seg_o<1> = bity<0> & !bity<3>
+	$ bity<2> & !bity<1> & bity<0>
+	# !bity<2> & bity<1> & !bity<0> & !bity<3>;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 2 | disp_seg_o<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<0>  | bity<3>  | bity<2>  | bity<1>
+INPUTMC | 4 | 1 | 8 | 1 | 15 | 1 | 10 | 1 | 9
+EQ | 3 | 
+   disp_seg_o<2> = bity<0> & !bity<3>
+	# bity<2> & !bity<1> & !bity<3>
+	# !bity<2> & !bity<1> & bity<0>;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 13 | disp_seg_o<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<2>  | bity<1>  | bity<0>  | bity<3>
+INPUTMC | 4 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 15
+EQ | 4 | 
+   disp_seg_o<3> = bity<2> & bity<1> & bity<0>
+	# bity<2> & !bity<1> & !bity<0> & !bity<3>
+	# !bity<2> & bity<1> & !bity<0> & bity<3>
+	# !bity<2> & !bity<1> & bity<0> & !bity<3>;	// (4 pt, 4 inp)
+
+MACROCELL | 1 | 11 | disp_seg_o<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<2>  | bity<1>  | bity<3>  | bity<0>
+INPUTMC | 4 | 1 | 10 | 1 | 9 | 1 | 15 | 1 | 8
+EQ | 3 | 
+   disp_seg_o<4> = bity<2> & bity<1> & bity<3>
+	# bity<2> & !bity<0> & bity<3>
+	# !bity<2> & bity<1> & !bity<0> & !bity<3>;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 3 | disp_seg_o<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<2>  | bity<0>  | bity<1>  | bity<3>
+INPUTMC | 4 | 1 | 10 | 1 | 8 | 1 | 9 | 1 | 15
+EQ | 3 | 
+   disp_seg_o<5> = bity<2> & !bity<0>
+	$ bity<2> & !bity<1> & !bity<3>
+	# bity<1> & bity<0> & bity<3>;	// (3 pt, 4 inp)
+
+MACROCELL | 1 | 4 | disp_seg_o<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | bity<1>  | bity<0>  | bity<2>  | bity<3>
+INPUTMC | 4 | 1 | 9 | 1 | 8 | 1 | 10 | 1 | 15
+EQ | 3 | 
+   disp_seg_o<6> = !bity<1> & bity<0>
+	$ bity<2> & !bity<1> & !bity<3>
+	# !bity<2> & bity<0> & bity<3>;	// (3 pt, 4 inp)
+
+PIN | BTN0 | 64 | 16 | LVCMOS18 | 218 | 6 | 1 | 5 | 0 | 11 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 15
+PIN | clk_i | 8192 | 16 | LVCMOS18 | 50 | 21 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 7 | 1 | 7 | 1 | 6 | 0 | 2 | 0 | 3 | 0 | 6 | 0 | 4 | 0 | 12 | 0 | 1 | 0 | 13 | 0 | 8 | 0 | 0 | 0 | 11 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 15
+PIN | LD0_CPLD | 536871040 | 0 | LVCMOS18 | 206
+PIN | LD10_CPLD | 536871040 | 0 | LVCMOS18 | 204
+PIN | LD11_CPLD | 536871040 | 0 | LVCMOS18 | 199
+PIN | LD1_CPLD | 536871040 | 0 | LVCMOS18 | 197
+PIN | LD2_CPLD | 536871040 | 0 | LVCMOS18 | 15
+PIN | LD3_CPLD | 536871040 | 0 | LVCMOS18 | 16
+PIN | LD8_CPLD | 536871040 | 0 | LVCMOS18 | 17
+PIN | LD9_CPLD | 536871040 | 0 | LVCMOS18 | 18
+PIN | disp_dig_o<0> | 536871040 | 0 | LVCMOS18 | 19
+PIN | disp_dig_o<1> | 536871040 | 0 | LVCMOS18 | 12
+PIN | disp_dig_o<2> | 536871040 | 0 | LVCMOS18 | 208
+PIN | disp_dig_o<3> | 536871040 | 0 | LVCMOS18 | 207
+PIN | disp_seg_o<0> | 536871040 | 0 | LVCMOS18 | 8
+PIN | disp_seg_o<1> | 536871040 | 0 | LVCMOS18 | 1
+PIN | disp_seg_o<2> | 536871040 | 0 | LVCMOS18 | 3
+PIN | disp_seg_o<3> | 536871040 | 0 | LVCMOS18 | 10
+PIN | disp_seg_o<4> | 536871040 | 0 | LVCMOS18 | 7
+PIN | disp_seg_o<5> | 536871040 | 0 | LVCMOS18 | 4
+PIN | disp_seg_o<6> | 536871040 | 0 | LVCMOS18 | 5
