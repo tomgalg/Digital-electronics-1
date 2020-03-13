@@ -1,5 +1,5 @@
 1.
 
     &nbsp;
-    ![segment_timing](../../wavedrom.png)
+    ![t](wavedrom.png)
     &nbsp;
