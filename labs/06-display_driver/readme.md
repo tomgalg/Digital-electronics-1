@@ -1,5 +1,2 @@
-1.
-
-    &nbsp;
-    ![t](wavedrom.png)
-    &nbsp;
+![t](wavedrom.png)
+    
