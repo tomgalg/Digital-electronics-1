@@ -8,6 +8,8 @@ entity stop_watch is --Port definition
 	port(
 		CLK: in std_logic; --creating CLK as input of standat logic (1,0)
 		srst_n_i: in std_logic; -- reset input (1,0)
+		ce_100Hz_i: in std_logic; 
+		CLK_en: in std_logic;
 		disp_digit_setiny : out std_logic_vector(4-1 downto 0); -- display digit select
 		disp_digit_desetiny : out std_logic_vector(4-1 downto 0);-- display digit select
 		disp_digit_sec : out std_logic_vector(4-1 downto 0); -- display digit select
@@ -18,23 +20,23 @@ entity stop_watch is --Port definition
 --							-------------
 --		CLK -----------|           |----- disp_digit_setiny(3:0)
 --		srst_n_i-------|stop_watch |----- disp_digit_desetiny(3:0)
---		               |           |------ disp_digit_sec(3:0)
---		               |           |------ disp_digit_sec(3:0)							
+--		ce_100Hz_i-----|           |------ disp_digit_sec(3:0)
+--		CLK_en---------|           |------ disp_digit_sec(3:0)							
 --		               |           |
 --							-------------
 end stop_watch;
 -----------------------------------------------------------------------
 architecture Behavioral of stop_watch is 
-	signal PRESCALER: std_logic_vector(7-1 downto 0); --10 ms = 100pulz˘ p¯i 10kHz --> 110 0100 (7bit)
-	signal digit_setiny: std_logic_vector(4-1 downto 0);-- kaûd˝ch 10ms -->  100 pulsu -- 0110 0100
-	signal digit_desetiny: std_logic_vector(4-1 downto 0); -- kaûd˝ch 100ms -->  1000 pulsu -- 
-	signal digit_sec: std_logic_vector(4-1 downto 0);		 -- kaûdou s -->  10 000 pulsu -- 
-	signal digit_desitky: std_logic_vector(4-1 downto 0); -- kaûd˝ch 10 s --> 100 000 pulsu -- 
+	signal PRESCALER: std_logic_vector(7-1 downto 0); --10 ms = 100pulz≈Ø p≈ôi 10kHz --> 110 0100 (7bit)
+	signal digit_setiny: std_logic_vector(4-1 downto 0);-- ka≈æd√Ωch 10ms -->  100 pulsu -- 0110 0100
+	signal digit_desetiny: std_logic_vector(4-1 downto 0); -- ka≈æd√Ωch 100ms -->  1000 pulsu -- 
+	signal digit_sec: std_logic_vector(4-1 downto 0);		 -- ka≈ædou s -->  10 000 pulsu -- 
+	signal digit_desitky: std_logic_vector(4-1 downto 0); -- ka≈æd√Ωch 10 s --> 100 000 pulsu -- 
 	
 begin
 
 
-	CounterProcess: process(srst_n_i,CLK) -- do z·vorky se pÌöou "TRIGER VALUES"
+	CounterProcess: process(srst_n_i,CLK) -- do z√°vorky se p√≠≈°ou "TRIGER VALUES"
 	begin
 		if rising_edge(CLK) then -- pokud je reset
 			if srst_n_i = '0' then
@@ -45,13 +47,13 @@ begin
 				digit_setiny <= (others => '0');
 				else
 					if PRESCALER < "1100100" then --100 pulsu v BIN (10ms)					
-						PRESCALER <= PRESCALER + 1; -- pokud je PRESCLAER pod 60 sec p¯i kaûdÈm CLK mu p¯idej + 1(ekvivalent 10 ms)
+						PRESCALER <= PRESCALER + 1; -- pokud je PRESCLAER pod 60 sec p≈ôi ka≈æd√©m CLK mu p≈ôidej + 1(ekvivalent 10 ms)
 					else 
-					PRESCALER <= (others => '0'); --- vynuluj vektor pozor pÌöou se jednoduchÈ uvozovky
-					digit_setiny <= digit_setiny + 1; --- jinak ¯eËeno zvedne to COUNTER jednou za 50 mil impuls˘ o 1
+					PRESCALER <= (others => '0'); --- vynuluj vektor pozor p√≠≈°ou se jednoduch√© uvozovky
+					digit_setiny <= digit_setiny + 1; --- jinak ≈ôeƒçeno zvedne to COUNTER jednou za 50 mil impuls≈Ø o 1
 					end if;
 					
-			if digit_setiny > 9 then -- pokud setiny p¯ech·zÌ z 9 na 10 
+			if digit_setiny > 9 then -- pokud setiny p≈ôech√°z√≠ z 9 na 10 
 				digit_setiny <= (others => '0');
 				digit_desetiny <= digit_desetiny + 1;
 				end if;
