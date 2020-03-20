@@ -67,5 +67,7 @@ StopWatch: entity work.stop_watch
 	disp_digit_sec => sec,
 	disp_digit_desitky => desitky
 	);
+clock_enable: entity work.clock_enable
+	port map();
 end Behavioral;
 
