@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -28,12 +28,23 @@ signal desetiny: std_logic_vector(4-1 downto 0);
 signal setiny: std_logic_vector(4-1 downto 0);
 signal sec: std_logic_vector(4-1 downto 0);
 signal desitky: std_logic_vector(4-1 downto 0);
+signal s_en:std_logic;
+
 
 
 
 
 begin
 
+Clock_enable: entity work.clock_enable
+		generic map(
+			g_NPERIOD => x"0064"			-- 100ms
+	 			)
+		port map(   srst_n_i => srst_n_i,
+					   clk_i => CLK,
+						clock_enable_o => s_en
+		);
+		
 MUX : entity work.mux_7seg
 	port map(
 	clk_i => CLK,
@@ -57,20 +68,20 @@ HEX2SSEG : entity work.hex_to_7seg -- načtení library vytvořené v hex_to_7se
 	 hex_to_7seg_Hout => seg_outH  -- active HIGH output
 	 ); -- výstup z 7 seg modulu do outputu topu
 
+
     
 StopWatch: entity work.stop_watch
 	port map(
 	CLK => CLK,
 	srst_n_i => srst_n_i,
+	ce_100Hz_i	=> s_en,
+	CLK_en => CLK_en,
 	disp_digit_setiny => setiny,
 	disp_digit_desetiny => desetiny,
 	disp_digit_sec => sec,
 	disp_digit_desitky => desitky
 	);
-Clock_enable: entity work.clock_enable
-		port map(   srst_n_i => srst_n_i,
-					   clock_enable_o => s_en,
-						clk_i => clk_i
-		);
+	
+
 end Behavioral;
 
