@@ -45,20 +45,3 @@ Simulation with reset in 8th sec
 
 ## 5 Top level
 
-Implement the top level in VHDL **or instead** draw a block diagram of used modules and name all inputs, outputs and internal signals. Use the `clock_enable` entity with the correct timing (the duration of each state should be 1 or 5 seconds).
-
-
-## Synchronize git
-
-Your repository must include `README.md` file with simulation screenshot(s), next the source code for traffic light controller, testbench code, and source code or schematic of top level implementation. Submit your solution **no later** than Friday.
-
-
-## Experiments on your own
-
-1. Follow the [exercise inspired by prof. Jon Valvano](https://arduining.com/2015/09/18/traffic-light-states-machine-with-arduino/) from University of Texas and desing an enhanced traffic light controller for the intersection of two equally busy one-way streets. The controller using two sensors and 6 lights. Two sensors detects the presence of cars in each direction and the goal is to maximize traffic flow, minimize waiting time at a red light, and avoid accidents.
-
-   ![traffic_light2](../../Images/lab8_traffic_light_intersection.png)
-
-   Explain how the intersection throughput is maximized.
-
-   Draw a state diagram of your implementation.
