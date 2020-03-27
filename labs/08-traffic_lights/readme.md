@@ -47,5 +47,5 @@ Simulation with reset in 8th sec
 
 ## 5 Top level
 
-Top
+Top scheme
 ![Top scheme](top_scheme.jpg)
