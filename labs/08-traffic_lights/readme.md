@@ -63,6 +63,11 @@ Follow programming conventions and coding style from previous lab exercises and 
 
 Rename the states `s0`, `s1`, .., `s5` from the example to more meaningful and draw the state diagram.
 
+Implementation
+![implementation](traffic_lights_tb01.vhd)
+
+Implementation with reset
+![implementation](traffic_lights_tb00_reset.vhd)
 
 ## 4 Traffic light simulation
 
