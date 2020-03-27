@@ -68,6 +68,12 @@ Rename the states `s0`, `s1`, .., `s5` from the example to more meaningful and d
 
 Design and simulate traffic light FSM in [EDA playground](https://www.edaplayground.com) or Xilinx ISE. Write a testbench that verifies all the functions of your traffic light controller (reset, timing, output lights).
 
+Simulation
+![waveform1](waveform1.PNG)
+
+Simulation with reset in 8th sec
+![waveformreset](waveform_reset.PNG)
+
 
 ## 5 Top level
 
