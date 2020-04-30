@@ -30,7 +30,8 @@ TBD
 
 ### Výsledky
 
-![tb_top](resources/tb_top.png)
+![](resources/tb_top.PNG)
+<p align="center">Obr. tb_top sim.</p>
 
 ### Zdrojové súbory
 
