@@ -4,7 +4,7 @@
 ### Popis zadania
 Úlohou bolo navrhnúť a odsimulovať UART (Universal asynchronous receiver/transmitter) vysielač s nastaviteľnými parametrami UART rámca, dátového slova a voľby jednej z dvoch prednastavených štandardných symbolových rýchlostí za chodu aplikácie. Bola predpokladaná implementácia top vrstvy na CoolRunner-II CPLD starter board. 
 
-UART (Universal asynchronous receiver/transmitter) je pomenovanie pre zariadenie slúžiace na asynchrónnu sériovú komunikáciu s nastaviteľnými parametrami posielaných dát, možnosťou nastavenia znakovej rýchlosti (baud rate) .
+UART (Universal asynchronous receiver/transmitter) je pomenovanie pre zariadenie slúžiace na asynchrónnu sériovú komunikáciu s nastaviteľnými parametrami posielaných dát, možnosťou nastavenia znakovej rýchlosti (baud rate). Vysielné dáta sú reprezentované rámcami. Rámec začína start bitom, ktorý je nastavený vždy na logickú hodnotu L(0) a značí začiatok slova. Za ním následujú dátové bity nesúce informáciu, v počte 5 až 9. Ďalším bitom je parity bit, ktorého logická úroveň sa mení medzi H a L pre zaistenie správnej parity. Rámec je ukončený jedným alebo dvomi stop bitmi s logickou hodnotou H(1). 
 
 ### Moduly
 
