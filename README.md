@@ -1,5 +1,7 @@
 
-# Digital-electronics-1 (Filip Paul, Tomáš Galgánek)
+# Digital-electronics-1 
+
+### Digital Electronics 1 - Course - Filip Paul, Tomáš Galgánek
 
 Readme k 1. cv je v složce labs
 
