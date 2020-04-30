@@ -6,10 +6,6 @@
 
 UART (Universal asynchronous receiver/transmitter) je pomenovanie pre zariadenie slúžiace na asynchrónnu sériovú komunikáciu s nastaviteľnými parametrami posielaných dát, možnosťou nastavenia znakovej rýchlosti (baud rate) .
 
-### Popis implementácie
-
-TBD
-
 ### Moduly
 
 Námi navrhnutý transmitter se skládá ze 4 hlavních modulů (viz Obr. Schéma zapojení top vrstvy). Hlavní myšlenkou celého návrhu je využití multiplexeru k přeměně paraelního vstupu k sériovému výstupu. Modul "clock_enable" slouží k vytváření pomalejšího hodinového signálu o volitelné frekvenci (baud rate), výstup takto zpomaleného hodinového signálu vstupuje do modulu "clk_counter", který funguje jako čítač hodinových pulzů. Výstup čítače je 4bitové slovo, které slouží k výběru adresy multiplexeru. Čítač počítá pulzy od 0 do 10 (od 0 do "a" v HEX), jakmile čítač napočítá do 10 ("a" HEX) zůstane v tomto stavu do doby, než detekuje nástupnou hranu od send_buttonu při které se resetuje. To, že na výstupu čítače zůstává 10 ("a" HEX) zapříčiní, že výstup multiplexeru je stop bit v době nevysílání žádných dat slova.
