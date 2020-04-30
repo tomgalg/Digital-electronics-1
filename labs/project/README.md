@@ -23,14 +23,14 @@ TBD
 ### Schéma zapojenia
 
 
-![](Tx_top_scheme.png)
+![](resources/Tx_top_scheme.png)
 <p align="center">
   Obr. Schéma zapojenia top vrstvy.
 </p>
 
 ### Výsledky
 
-TBD
+![](/resources/tb_top.png)
 
 ### Zdrojové súbory
 
