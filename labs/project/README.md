@@ -30,7 +30,7 @@ TBD
 
 ### Výsledky
 
-![](/resources/tb_top.png)
+![tb_top](resources/tb_top.png)
 
 ### Zdrojové súbory
 
