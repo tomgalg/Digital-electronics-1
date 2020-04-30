@@ -6,7 +6,7 @@
 
 UART (Universal asynchronous receiver/transmitter) je pomenovanie pre zariadenie slúžiace na asynchrónnu sériovú komunikáciu s nastaviteľnými parametrami posielaných dát, možnosťou nastavenia znakovej rýchlosti (baud rate). Vysielné dáta sú reprezentované rámcami. Rámec začína start bitom, ktorý je nastavený vždy na logickú hodnotu L(0) a značí začiatok slova. Za ním následujú dátové bity nesúce informáciu, v počte 5 až 9. Ďalším bitom je parity bit, ktorého logická úroveň sa mení medzi H a L pre zaistenie správnej parity. Rámec je ukončený jedným alebo dvomi stop bitmi s logickou hodnotou H(1). 
 
-Navrhnuté zariadenie pracuje so vstupným hodinovým signálom 1 MHz. Zapojenie obsahuje prepínač pre nastavenie znakovej rýchlosti 9600 alebo 19200 baudov (baud_switch), send_button pre resetovanie čítača, start_stop_switch, vstup pre dáta (v našom prípade pre 8-bitovú informáciu) a parity_switch pre voľbu parity.
+Navrhnuté zariadenie pracuje so vstupným hodinovým signálom 1 MHz. Zapojenie obsahuje prepínač pre nastavenie znakovej rýchlosti 9600 alebo 19200 baudov (baud_switch), send_button pre resetovanie čítača, start_stop_switch pre nastavenie start/stop bitov, vstup pre dáta (v našom prípade pre 8-bitovú informáciu) a parity_switch pre voľbu parity.
 
 ### Moduly
 
