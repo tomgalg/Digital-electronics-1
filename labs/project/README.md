@@ -24,31 +24,31 @@ Návrh obsahuje několik nedostatků a to hlavně, když dojde ke změně datov�
 
 ![](resources/Tx_top_scheme.png)
 <p align="center">
-  Obr. Schéma zapojení top vrstvy.
+  Obr. 1. Schéma zapojení top vrstvy.
 </p>
 
 ### Výsledky
 
 ![](resources/tb_top.PNG)
-<p align="center">Obr. Časový priebeh simulácie transmitteru.</p>
+<p align="center">Obr. 2. Časový priebeh simulácie transmitteru.</p>
 
 ![](resources/clock_enable_TB.PNG)
-<p align="center">Obr. Prepínanie znakovej rýchlosti.</p>
+<p align="center">Obr. 3. Prepínanie znakovej rýchlosti.</p>
 
 ![](resources/tb_paritysw_LOW.PNG)
-<p align="center">Obr. Lichá parita.</p>
+<p align="center">Obr. 4. Lichá parita.</p>
 
 ![](resources/tb_paritysw_HIGH.PNG)
-<p align="center">Obr. Sudá parita.</p>
+<p align="center">Obr. 5. Sudá parita.</p>
 
 ![](resources/clk_counter_TB.PNG)
-<p align="center">Obr. Časový priebeh - testbench pre čítací modul (clk_counter).</p>
+<p align="center">Obr. 6. Časový priebeh - testbench pre čítací modul (clk_counter).</p>
 
 ![](resources/MUX_TB.PNG)
-<p align="center">Obr. Časový priebeh - testbench pre multiplexer (MUX modul).</p>
+<p align="center">Obr. 7. Časový priebeh - testbench pre multiplexer (MUX modul).</p>
 
 ![](resources/MUX_TB.PNG)
-<p align="center">Obr. Časový priebeh - testbench pre modul parity_bit.</p>
+<p align="center">Obr. 8. Časový priebeh - testbench pre modul parity_bit.</p>
 
 
 ### Zdrojové súbory
@@ -63,10 +63,10 @@ Návrh obsahuje několik nedostatků a to hlavně, když dojde ke změně datov�
 * [tb_clk_counter.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/CLK_counter/tb_clk_counter.vhd)
 
 
-### Zdroje
+### Zdroje a použitá literatura
 
-* Prednášky z predmetu Digitální Elektronika 1, návody a zdrojové súbory k cvičeniam od p. doc. Frýzy
-* <https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter>
+* [1] Prednášky z predmetu Digitální Elektronika 1, návody a zdrojové súbory k cvičeniam od p. doc. Frýzy
+* [2] *Universal_asynchronous_receiver-transmitter.* Wikipedia. [online]. Dostupné z URL: <https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter>
 
 
 
