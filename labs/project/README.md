@@ -46,14 +46,14 @@ TBD
 
 ### Zdrojové súbory
 
-* [MUX.vhd](/MUX/MUX.vhd)
-* [tb_MUX.vhd](/MUX/tb_MUX.vhd)
-* [clock_enable.vhd](/clock_enable/clock_enable.vhd)
-* [tb_clock_enable.vhd](/clock_enable/tb_clock_enable.vhd)
-* [parity_bit.vhd](/parity_bit/parity_bit.vhd)
-* [tb_parity_bit.vhd](/parity_bit/tb_parity_bit.vhd)
-* [clk_counter.vhd](/CLK_counter/clk_counter.vhd)
-* [tb_clk_counter.vhd](/CLK_counter/tb_clk_counter.vhd)
+* [MUX.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/MUX/MUX.vhd)
+* [tb_MUX.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/MUX/tb_MUX.vhd)
+* [clock_enable.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/clock_enable/clock_enable.vhd)
+* [tb_clock_enable.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/clock_enable/tb_clock_enable.vhd)
+* [parity_bit.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/parity_bit/parity_bit.vhd)
+* [tb_parity_bit.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/parity_bit/tb_parity_bit.vhd)
+* [clk_counter.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/CLK_counter/clk_counter.vhd)
+* [tb_clk_counter.vhd](https://github.com/tomgalg/Digital-electronics-1/blob/master/labs/project/CLK_counter/tb_clk_counter.vhd)
 
 
 ### Zdroje
