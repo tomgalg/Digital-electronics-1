@@ -3,8 +3,6 @@
 
 ### Digital Electronics 1 - Course - Filip Paul, Tomáš Galgánek
 
-Readme k 1. cv je v složce labs
-
 [lab01](labs/01-gates/)
 
 [lab02](labs/02-ise/Cv2/)
