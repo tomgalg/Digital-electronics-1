@@ -47,7 +47,7 @@ Návrh obsahuje několik nedostatků a to hlavně, když dojde ke změně datov�
 ![](resources/MUX_TB.PNG)
 <p align="center">Obr. 7. Časový priebeh - testbench pre multiplexer (MUX modul).</p>
 
-![](resources/MUX_TB.PNG)
+![](resources/parity_bit_TB.PNG)
 <p align="center">Obr. 8. Časový priebeh - testbench pre modul parity_bit.</p>
 
 
