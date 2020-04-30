@@ -2,7 +2,7 @@
 # Project: UART transmitter
 
 ### Popis zadania
-Úlohou bolo navrhnúť UART (Universal asynchronous receiver/transmitter) vysielač s nastaviteľnými parametrami UART rámca, dátového slova a voľby jednej z dvoch prednastavených štandardných symbolových rýchlostí za chodu aplikácie. Bola predpokladaná implementácia top vrstvy na CoolRunner-II CPLD starter board. 
+Úlohou bolo navrhnúť a odsimulovať UART (Universal asynchronous receiver/transmitter) vysielač s nastaviteľnými parametrami UART rámca, dátového slova a voľby jednej z dvoch prednastavených štandardných symbolových rýchlostí za chodu aplikácie. Bola predpokladaná implementácia top vrstvy na CoolRunner-II CPLD starter board. 
 
 UART (Universal asynchronous receiver/transmitter) je pomenovanie pre zariadenie slúžiace na asynchrónnu sériovú komunikáciu s nastaviteľnými parametrami posielaných dát, možnosťou nastavenia znakovej rýchlosti (baud rate) .
 
@@ -41,6 +41,14 @@ Návrh obsahuje několik nedostatků a to hlavně, když dojde ke změně datov�
 ![](resources/tb_paritysw_HIGH.PNG)
 <p align="center">Obr. Sudá parita.</p>
 
+![](resources/clk_counter_TB.PNG)
+<p align="center">Obr. Časový priebeh - testbench pre čítací modul (clk_counter).</p>
+
+![](resources/MUX_TB.PNG)
+<p align="center">Obr. Časový priebeh - testbench pre multiplexer (MUX modul).</p>
+
+![](resources/MUX_TB.PNG)
+<p align="center">Obr. Časový priebeh - testbench pre modul parity_bit.</p>
 
 
 ### Zdrojové súbory
