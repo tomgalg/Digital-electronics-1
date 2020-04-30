@@ -1,5 +1,5 @@
 
-# Digital-electronics-1
+# Digital-electronics-1 (Filip Paul, Tomáš Galgánek)
 
 Readme k 1. cv je v složce labs
 
