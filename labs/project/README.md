@@ -24,7 +24,9 @@ TBD
 
 
 ![](Tx_top_scheme.png)
-Schéma zapojenia top vrstvy
+<p align="center">
+  Obr. Schéma zapojenia top vrstvy.
+</p>
 
 ### Výsledky
 
