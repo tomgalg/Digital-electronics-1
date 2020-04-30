@@ -19,4 +19,4 @@ Readme k 1. cv je v složce labs
 
 [lab08](labs/08-traffic_lights/)
 
-[project](labs/project/)
+[PROJECT - UART Transmitter](labs/project/)
