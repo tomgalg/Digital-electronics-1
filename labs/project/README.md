@@ -12,19 +12,19 @@ TBD
 
 ### Moduly
 
-Námi navrhnutý transmitter se skládá ze 4 hlavních modulů (viz Obr. Schéma zapojenia top vrstvy). Hlavní myšlenkou celého návrhu je využití multiplexeru k přeměně paraelního vstupu k sériovému výstupu. Modul "clock_enable" slouží k vytváření pomalejšího hodinového signálu o volitelné frekvenci (baud rate), výstup takto zpomaleného hodinového signálu vstupuje do modulu "clk_counter", který funguje jako čítač hodinových pulzů. Výstup čítače je 4bitové slovo, které slouží k výběru adresy multiplexeru. Čítač počítá pulzy od 0 do 10 (od 0 do "a" v HEX), jakmile čítač napočítá do 10 ("a" HEX) zůstane v tomto stavu do doby, než detekuje nástupnou hranu od send_buttonu při které se resetuje. To, že na výstupu čítače zůstává 10 ("a" HEX) zapříčiní, že výstup multiplexeru je stop bit v době nevysílání žádných dat slova.
+Námi navrhnutý transmitter se skládá ze 4 hlavních modulů (viz Obr. Schéma zapojení top vrstvy). Hlavní myšlenkou celého návrhu je využití multiplexeru k přeměně paraelního vstupu k sériovému výstupu. Modul "clock_enable" slouží k vytváření pomalejšího hodinového signálu o volitelné frekvenci (baud rate), výstup takto zpomaleného hodinového signálu vstupuje do modulu "clk_counter", který funguje jako čítač hodinových pulzů. Výstup čítače je 4bitové slovo, které slouží k výběru adresy multiplexeru. Čítač počítá pulzy od 0 do 10 (od 0 do "a" v HEX), jakmile čítač napočítá do 10 ("a" HEX) zůstane v tomto stavu do doby, než detekuje nástupnou hranu od send_buttonu při které se resetuje. To, že na výstupu čítače zůstává 10 ("a" HEX) zapříčiní, že výstup multiplexeru je stop bit v době nevysílání žádných dat slova.
 
 Posledním modulem je "parity_bit", tento modul je generátorem parity bitu, který je připojen na předposlední adresu multiplexeru. Generace parity bitu probíhá pomocí postupného porovnávání jednotlivých bitů vstupního slova a to tak, že v prvním kroce vygeneruje výsledek funkce XOR z "parity_switch" (slouží k změně parity bitu, zda při sudosti bude parity bit 1 nebo 0) a prvního datového bitu, tento výsledek je pak znovu "XORován" z druhým datovým bitem atd... Generace parity bitu tak trvá 8 hodinových impulzů o interní frekvenci 1MHz. Bohužel při generaci parity bitu může docházet k nesprávným výsledkům při změně vstupního slova to znamená, že správná generace parity bitu může trvat maximálně 16 hodinových impulzů o frekvenci 1MHz. Z důvodu, že parity bit je vysílaný až jako 10 bit v pořadí při frekvenci maximálně 19200 Hz není nutné tento nedostatek odstraňovat.
 
 Návrh obsahuje několik nedostatků a to hlavně, když dojde ke změně datového slova při jeho odesílání neobsahuje totiž žádný paměťový modul, kde by se vstupní slovo zaznamenalo a pak odeslalo. Tento modul si však myslím, že není potřebný a to hlavně z důvodu, že odesílání datového slova je podmíněno náběžnou hranou "send_buttonu".
 
 
-### Schéma zapojenia
+### Schéma zapojení
 
 
 ![](resources/Tx_top_scheme.png)
 <p align="center">
-  Obr. Schéma zapojenia top vrstvy.
+  Obr. Schéma zapojení top vrstvy.
 </p>
 
 ### Výsledky
